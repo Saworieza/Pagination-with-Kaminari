@@ -1,0 +1,11 @@
+<h1>Posts</h1>
+<hr />
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <p>
+  <%= post.body %>
+  </p>
+<% end %>
+<hr />
+<%= paginate @posts %><!--paginate helper is the line responsible for rendering the pagination links-->
+<%= page_entries_info @posts %> <!-- displays a line like so: displaying posts 1-10 of 100-->
